@@ -1,4 +1,4 @@
-export default function ValidarQR() { return (import { useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 export default function ValidarQR() {
@@ -19,4 +19,3 @@ export default function ValidarQR() {
     </div>
   )
 }
-); }
