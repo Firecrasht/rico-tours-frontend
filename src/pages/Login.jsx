@@ -1,27 +1,10 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react'
+import axios from 'axios'
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = async () => {
-    try {
-      const res = await axios.post('https://rico-tours-backend.onrender.com/api/auth/login', { email, password });
-      alert('Login exitoso');
-    } catch (error) {
-      alert('Error en login');
-    }
-  };
-
+export default function Login() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h2>Login</h2>
-      <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-      <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
+    <div>
+      <h1>Login</h1>
     </div>
-  );
-};
-
-export default Login;
+  )
+}
